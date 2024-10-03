@@ -1,0 +1,165 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>NP-hard问题 | Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一、前置知识1.多项式     多项式是由变量（如x、y等）和系数通过有限次的加、减、乘运算得到的表达式。例如3x^2+2x + 1就是一个关于(x)的多项式 2.时间复杂度        时间复杂度是用来衡量算法运行效率的一个指标。它描述了算法运行时间随着输入规模增长而增长的量级。简单来说，就是当输入的数据量（规模）不断变大时，算法执行所需时间的增长速度。通常使用大O符号（O）来表示时间复杂度。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NP-hard问题">
+<meta property="og:url" content="http://example.com/2024/10/03/NP-hard%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、前置知识1.多项式     多项式是由变量（如x、y等）和系数通过有限次的加、减、乘运算得到的表达式。例如3x^2+2x + 1就是一个关于(x)的多项式 2.时间复杂度        时间复杂度是用来衡量算法运行效率的一个指标。它描述了算法运行时间随着输入规模增长而增长的量级。简单来说，就是当输入的数据量（规模）不断变大时，算法执行所需时间的增长速度。通常使用大O符号（O）来表示时间复杂度。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/blog.jpg">
+<meta property="article:published_time" content="2024-10-03T04:42:30.328Z">
+<meta property="article:modified_time" content="2024-10-03T06:25:34.545Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/blog.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2024/10/03/NP-hard%E9%97%AE%E9%A2%98/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        if (name && globalFn[key][name]) return
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'NP-hard问题',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-10-03 14:25:34'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Hexo</span></a><a class="nav-page-title" href="/"><span class="site-name">NP-hard问题</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">NP-hard问题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-10-03T04:42:30.328Z" title="Created 2024-10-03 12:42:30">2024-10-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-10-03T06:25:34.545Z" title="Updated 2024-10-03 14:25:34">2024-10-03</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>一、前置知识<br>1.多项式<br>     多项式是由变量（如x、y等）和系数通过有限次的加、减、乘运算得到的表达式。例如3x^2+2x + 1就是一个关于(x)的多项式</p>
+<p>2.时间复杂度<br>        时间复杂度是用来衡量算法运行效率的一个指标。它描述了算法运行时间随着输入规模增长而增长的量级。简单来说，就是当输入的数据量（规模）不断变大时，算法执行所需时间的增长速度。通常使用大O符号（O）来表示时间复杂度。例如，O(n)、O(n²)、O(log n)等。其中，n代表输入规模。</p>
+<p>如果一个算法的时间复杂度是O(n)，表示算法的运行时间与输入规模n成线性关系。例如，一个简单的遍历数组的算法，需要逐个访问数组中的元素，当数组元素个数为n时，算法执行时间大致与n成正比。<br>如果时间复杂度是O(n²)，则运行时间与输入规模n的平方成正比。例如，嵌套的双层循环遍历一个二维数组，当二维数组的边长为n时，执行时间会随着n的平方增长。<br>O(log n)的时间复杂度表示算法运行时间的增长速度比线性增长慢很多。例如，二分查找算法在一个有序数组中查找元素时，每次查找都能将搜索范围缩小一半，其时间复杂度就是O(log n)。<br>3.约化<br>        一个问题A可以约化为B的含义是，可以用问题B的解法解决问题A。</p>
+<p>二、基础概念<br>1.P问题<br>        在计算复杂性理论中，P问题（Polynomial - time problems）是指能够在多项式时间内被解决的问题。这里的“解决”是指可以用一个确定性算法，在输入规模为n的情况下，在时间复杂度为O(n^k)（其中k为某个常数）内得到问题的解。</p>
+<pre><code>    例如，计算两个整数的和、判断一个数是否为偶数等问题都是P问题。对于计算两个整数的和，无论这两个整数有多大，我们都可以按照基本的加法运算规则，在有限的、与输入规模成多项式关系的步骤内得到结果。
+</code></pre>
+<p>2.NP问题<br>        NP 问题（Nondeterministic Polynomial - time problems）是指可以在多项式时间内验证一个解是否正确的问题。这里强调的是验证解的速度，而非找到解的速度。</p>
+<pre><code>    例如，对于一个旅行商问题（TSP），给定一个特定的旅行路线（解），我们可以在多项式时间内计算这条路线的总长度，并验证它是否满足问题的要求（比如是否是所有城市都经过且每个城市只经过一次的路线中的较短者）。
+</code></pre>
+<p>3.NP-complete问题<br>        NP - complete（NP 完全）问题是 NP 问题中的一个特殊子类。一个问题是 NP - complete 问题需要满足两个条件：</p>
+<p>它必须是一个 NP 问题，也就是说，可以在多项式时间内验证一个解是否正确。<br>所有的 NP 问题都能够在多项式时间内归约到这个问题。归约是一种计算复杂性理论中的概念，简单来说，如果问题 A 可以归约到问题 B，那么在某种意义上，问题 A 不比问题 B 难。<br>4.NP-hard问题<br>        NP - hard 问题至少和 NP 完全问题（NP - complete）一样难。如果一个问题是 NP - hard 的，意味着它不比 NP 中的任何问题容易，这里的 “容易” 是从计算复杂性的角度来说的。即使可以在多项式时间内验证一个 NP 问题的解，但对于 NP - hard 问题，目前还没有发现多项式时间的算法来解决它。</p>
+<pre><code>    如果所有 NP 问题都能在多项式时间内归约到某个问题，那么这个问题就是 NP - hard 问题。归约是一种转换方法，例如，如果有问题 A 和问题 B，若能在多项式时间内将问题 A 的实例转化为问题 B 的实例，并且利用问题 B 的解能在多项式时间内得到问题 A 的解，就说 A 可以归约到 B。
+</code></pre>
+<p>三、实例<br>1.旅行商问题（Travelling Salesman Problem, TSP）<br>给定一组城市和它们之间的距离，要求找到一条经过所有城市且每个城市只经过一次的最短路径。这是一个经典的 NP - hard 问题。<br>随着城市数量的增加，可能的路径数量呈指数级增长，很难在多项式时间内找到最优解。<br>2.背包问题（Knapsack Problem）的一些变形<br>例如，有多个物品，每个物品有重量和价值，在限定背包容量的情况下，求能装入背包的最大价值组合。如果对这个问题进行一些复杂的扩展，如增加多种约束条件等情况，就可能变成 NP - hard 问题。</p>
+<p>CSDN链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_55882840/article/details/142680244">https://blog.csdn.net/qq_55882840/article/details/142680244</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/2024/10/03/NP-hard%E9%97%AE%E9%A2%98/">http://example.com/2024/10/03/NP-hard%E9%97%AE%E9%A2%98/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/blog.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info is-center"><div class="avatar-img"><img src="/img/blog.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">John Doe</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/03/NP-hard%E9%97%AE%E9%A2%98/" title="NP-hard问题">NP-hard问题</a><time datetime="2024-10-03T04:42:30.328Z" title="Created 2024-10-03 12:42:30">2024-10-03</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
