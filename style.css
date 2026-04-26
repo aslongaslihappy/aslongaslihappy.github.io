@@ -41,18 +41,18 @@ a:hover {
 
 .hero {
   position: relative;
-  min-height: 150px;
-  padding-right: 150px;
+  min-height: 170px;
+  padding-right: 140px;
   padding-bottom: 28px;
   border-bottom: 2px solid var(--text);
 }
 
 .avatar {
   position: absolute;
-  top: 0;
+  top: 33px;
   right: 0;
   width: 116px;
-  height: 150px;
+  height: 151px;
   object-fit: cover;
   object-position: center;
   border: 1px solid var(--line);
@@ -77,7 +77,7 @@ p {
 }
 
 h1 {
-  font-family: "Songti SC", SimSun, serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2.35rem, 6vw, 3.35rem);
   line-height: 1.1;
 }
@@ -139,45 +139,21 @@ strong {
   color: var(--text);
 }
 
-.timeline {
-  display: grid;
-  gap: 14px;
-}
-
-.timeline article,
-.block {
-  padding: 16px 18px;
-  background: #fbfcfb;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-}
-
-.timeline article {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 150px;
-  gap: 18px;
-}
-
-.timeline p {
-  margin-top: 8px;
+.research-line {
+  color: var(--text);
+  line-height: 1.82;
 }
 
 time {
+  display: block;
+  margin-top: 4px;
   color: var(--muted);
   font-size: 0.92rem;
   line-height: 1.55;
-  text-align: right;
 }
 
-.block-head {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 140px;
-  gap: 18px;
-  margin-bottom: 12px;
-}
-
-.block p + p {
-  margin-top: 10px;
+.item-head {
+  margin-bottom: 6px;
 }
 
 .paper-list {
@@ -208,6 +184,51 @@ time {
   gap: 10px;
 }
 
+.simple-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding-left: 1.35rem;
+}
+
+.simple-list li {
+  padding-left: 4px;
+}
+
+.no-marker-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.no-marker-list li {
+  padding-left: 0;
+}
+
+.simple-list p,
+.simple-list h3 {
+  color: var(--text);
+}
+
+.simple-list p + p {
+  margin-top: 6px;
+}
+
+.resume-list p {
+  color: var(--muted);
+}
+
+.education-list li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px;
+  gap: 18px;
+  align-items: start;
+}
+
+.education-list time {
+  margin-top: 0;
+  text-align: right;
+}
+
 @media (max-width: 720px) {
   body {
     padding: 22px 12px;
@@ -218,28 +239,26 @@ time {
   }
 
   .hero {
-    display: grid;
     min-height: 0;
     padding-right: 0;
   }
 
   .avatar {
     position: static;
-    order: -1;
-    width: 104px;
-    height: 136px;
-    margin-bottom: 18px;
+    width: 96px;
+    height: 126px;
+    margin: 16px 0 0;
   }
 
-  .timeline article,
-  .block-head {
+  .education-list li {
     grid-template-columns: 1fr;
-    gap: 8px;
+    gap: 4px;
   }
 
-  time {
+  .education-list time {
     text-align: left;
   }
+
 }
 
 @media print {
