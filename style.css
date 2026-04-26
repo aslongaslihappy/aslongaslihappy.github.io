@@ -40,8 +40,24 @@ a:hover {
 }
 
 .hero {
+  position: relative;
+  min-height: 150px;
+  padding-right: 150px;
   padding-bottom: 28px;
   border-bottom: 2px solid var(--text);
+}
+
+.avatar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 116px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--soft);
 }
 
 .eyebrow {
@@ -199,6 +215,20 @@ time {
 
   .resume {
     padding: 28px 20px;
+  }
+
+  .hero {
+    display: grid;
+    min-height: 0;
+    padding-right: 0;
+  }
+
+  .avatar {
+    position: static;
+    order: -1;
+    width: 104px;
+    height: 136px;
+    margin-bottom: 18px;
   }
 
   .timeline article,
