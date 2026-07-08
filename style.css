@@ -83,28 +83,6 @@ h1 {
   line-height: 1.08;
 }
 
-.profile-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px 24px;
-  margin-top: 18px;
-  padding: 0;
-  list-style: none;
-}
-
-.profile-grid li {
-  min-width: 0;
-  color: var(--text);
-}
-
-.profile-grid span {
-  display: inline-block;
-  min-width: 84px;
-  margin-right: 8px;
-  color: var(--muted);
-  font-weight: 700;
-}
-
 .link-row {
   display: flex;
   flex-wrap: wrap;
@@ -314,11 +292,6 @@ dd {
 
   h1 {
     font-size: 2.35rem;
-  }
-
-  .profile-grid {
-    grid-template-columns: 1fr;
-    gap: 6px;
   }
 
   .portrait {
