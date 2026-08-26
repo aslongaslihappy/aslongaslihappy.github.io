@@ -14,14 +14,6 @@ redirect_from:
 
 My work focuses on multi-objective optimization, computational intelligence and evolutionary optimization, deep reinforcement learning, and operations research. I study their applications in flexible job shop scheduling, coordinated AGV scheduling, and large-language-model-assisted automated algorithm design.
 
-This website brings together my publications and open-source implementations, with the aim of making complex optimization methods easier to understand, reproduce, and extend.
-
-<div class="home-metrics" aria-label="Research output overview">
-  <div><strong>3</strong><span>Journal Articles</span></div>
-  <div><strong>3</strong><span>Open-source Projects</span></div>
-  <div><strong>6</strong><span>Research Topics</span></div>
-</div>
-
 ## Research Interests
 
 <div class="research-tags" aria-label="Research interests">
