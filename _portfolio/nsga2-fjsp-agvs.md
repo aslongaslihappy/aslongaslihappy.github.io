@@ -4,6 +4,7 @@ collection: portfolio
 permalink: /portfolio/nsga2-fjsp-agvs/
 kind: "Integrated scheduling"
 summary: "A Python implementation of NSGA-II for multi-objective flexible job shop scheduling with AGVs, optimizing makespan and energy consumption."
+excerpt: "A Python implementation of NSGA-II for multi-objective flexible job shop scheduling with AGVs, optimizing makespan and energy consumption."
 technologies:
   - Python
   - NSGA-II
@@ -23,4 +24,3 @@ This project extends flexible job shop scheduling to include automated guided ve
 ## Links
 
 - [View the repository on GitHub](https://github.com/aslongaslihappy/NSGA-II-FJSP-AGVs)
-
