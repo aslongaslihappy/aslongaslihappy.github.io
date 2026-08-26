@@ -2,33 +2,33 @@
   MINT THEME - LIGHT VERSION
   ========================================================================== */
 /* Color codes used for the theme */
-$primary-color              : #0f766e;
+$primary-color              : #11999e;
 $dark-primary-color         : mix(#000, $primary-color, 40%);
 $darker-primary-color       : mix(#000, $primary-color, 60%);
 $light-primary-color        : mix(#fff, $primary-color, 50%);
 $lighter-primary-color      : mix(#fff, $primary-color, 90%);
-$background                 : #f7f5ef;
+$background                 : #f3f6f6;
 $background-light           : #ffffff;
-$background-lighter         : #fbfaf7;
-$text                       : #253436;
-$text-muted                 : #667574;
-$link                       : #0f766e;
+$background-lighter         : #fafbfb;
+$text                       : #40514e;
+$text-muted                 : #5c6d6a;
+$link                       : #11999e;
 $link-dark                 : mix(#000, $link, 25%);
 $link-light                : mix(#fff, $link, 25%);
-$footer                     : #e5eee9;
-$border                     : #dce4df;
-$border-dark                : #c5d2cc;
+$footer                     : #30e3ca;
+$border                     : mix(#fff, #40514e, 75%);
+$border-dark                : mix(#fff, #40514e, 60%);
 
 /* Color codes used for the site */
 $danger-color               : #e74c3c;
-$info-color                 : #0f766e;
-$notice-color               : #cfe6df;
+$info-color                 : #11999e;
+$notice-color               : #30e3ca;
 $success-color              : #2ecc71;
 $warning-color              : #f39c12;
 
 /* Other basic settings for the template */
-$border-radius              : 8px;
-$box-shadow                 : 0 8px 28px rgba(20, 52, 55, 0.08);
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
 $global-transition          : all 0.2s ease-in-out;
 $masthead-height            : 70px;
 $navicon-width              : 28px;

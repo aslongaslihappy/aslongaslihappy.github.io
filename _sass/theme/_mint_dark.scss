@@ -2,18 +2,18 @@
    MINT THEME - DARK VERSION
    ========================================================================== */
 /* Color codes used for the theme */
-$primary-color              : #5eead4;
-$background                 : #111c1d;
-$background-light           : #192829;
-$background-lighter        : #203334;
-$text                       : #e9f1ef;
-$text-muted                 : #afc0bc;
-$link                       : #67e8d4;
-$link-dark                  : #99f6e4;
-$link-light                : #40c9b7;
-$footer                     : #0b1415;
-$border                     : #2a3b3b;
-$border-light               : #3b5250;
+$primary-color              : #30e3ca;
+$background                 : #1a2421;
+$background-light           : #243430;
+$background-lighter        : #2e443f;
+$text                       : #e8f5f3;
+$text-muted                 : #b8d5d1;
+$link                       : #4effd9;
+$link-dark                  : #7cffdf;
+$link-light                : #2bd4bd;
+$footer                     : #0f1614;
+$border                     : #2e443f;
+$border-light               : #3d5950;
 
 /* Color codes used for the site */
 $danger-color               : #e74c3c;
@@ -23,8 +23,8 @@ $success-color              : #2ecc71;
 $warning-color              : #f39c12;
 
 /* Other basic settings for the template */
-$border-radius              : 8px;
-$box-shadow                 : 0 8px 28px rgba(0, 0, 0, 0.24);
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
 $global-transition          : all 0.2s ease-in-out;
 $masthead-height            : 70px;
 $navicon-width              : 28px;
