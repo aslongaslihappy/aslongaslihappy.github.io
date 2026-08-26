@@ -53,7 +53,12 @@ body {
 }
 
 .author__bio {
+  display: block;
+  width: 100%;
+  max-width: 100%;
   line-height: 1.55;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 .eyebrow,
@@ -304,4 +309,3 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
-

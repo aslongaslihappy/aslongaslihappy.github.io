@@ -7,7 +7,6 @@
 - `/_pages/`：首页、论文、项目、博客归档与 CV
 - `/_publications/`：论文条目
 - `/_portfolio/`：开源项目条目
-- `/_posts/`：研究笔记
 - `/_sass/layout/_custom.scss`：站点定制样式
 - `/_config.yml`：个人信息、导航与站点配置
 

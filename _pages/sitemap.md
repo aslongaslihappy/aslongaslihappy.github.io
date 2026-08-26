@@ -10,7 +10,6 @@ author_profile: true
 - [About](/)
 - [Publications](/publications/)
 - [Projects](/portfolio/)
-- [Blog](/year-archive/)
 - [CV](/cv/)
 
 ## Publications
@@ -22,12 +21,6 @@ author_profile: true
 ## Projects
 
 {% for post in site.portfolio %}
-- [{{ post.title }}]({{ post.url }})
-{% endfor %}
-
-## Posts
-
-{% for post in site.posts %}
 - [{{ post.title }}]({{ post.url }})
 {% endfor %}
 
