@@ -1,0 +1,27 @@
+---
+layout: archive
+title: "Publications"
+permalink: /publications/
+description: "李天恩的期刊论文与研究成果。"
+author_profile: true
+---
+
+<p class="page-intro">Research on multi-objective optimization, intelligent scheduling, evolutionary computation and deep reinforcement learning.</p>
+
+{% include base_path %}
+
+<div class="publication-list">
+{% for post in site.publications reversed %}
+  <article class="publication-card">
+    <p class="item-meta">{{ post.venue }} · {{ post.date | date: "%Y" }}</p>
+    <h2><a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></h2>
+    <div class="publication-excerpt">{{ post.excerpt | markdownify }}</div>
+    <div class="publication-actions">
+      <a href="{{ base_path }}{{ post.url }}">Details</a>
+      {% if post.paperurl %}<a href="{{ post.paperurl }}">DOI ↗</a>{% endif %}
+      {% if post.repo_url %}<a href="{{ post.repo_url }}">Code ↗</a>{% endif %}
+    </div>
+  </article>
+{% endfor %}
+</div>
+
