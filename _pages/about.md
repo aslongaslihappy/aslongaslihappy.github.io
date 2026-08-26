@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "About Me"
-description: "李天恩的学术主页，研究方向包括多目标优化、演化计算、深度强化学习、柔性车间调度与大语言模型自动算法设计。"
+description: "Academic homepage of 李天恩 / Tianen Li, featuring research on multi-objective optimization, evolutionary computation, deep reinforcement learning, flexible job shop scheduling, and large-language-model-assisted algorithm design."
 author_profile: true
 redirect_from:
   - /about/
@@ -10,13 +10,13 @@ redirect_from:
 
 <p class="eyebrow">OPTIMIZATION · INTELLIGENCE · SCHEDULING</p>
 
-<p class="home-lead">你好，我是 <strong>李天恩（Tianen Li）</strong>。我关注智能优化方法如何帮助我们理解并解决复杂制造系统中的调度问题。</p>
+<p class="home-lead">Hello, I am <strong>李天恩 / Tianen Li</strong>. My research explores how intelligent optimization methods can help us understand and solve complex scheduling problems in manufacturing systems.</p>
 
-我的研究聚焦于多目标优化、计算智能与演化优化、深度强化学习和运筹优化，并探索这些方法在柔性车间调度、AGV 协同调度及大语言模型自动算法设计中的应用。
+My work focuses on multi-objective optimization, computational intelligence and evolutionary optimization, deep reinforcement learning, and operations research. I study their applications in flexible job shop scheduling, coordinated AGV scheduling, and large-language-model-assisted automated algorithm design.
 
-我希望把论文、开源实现和研究笔记整理在这里，让复杂的优化方法更容易理解、复现和继续扩展。
+This website brings together my publications, open-source implementations, and research notes, with the aim of making complex optimization methods easier to understand, reproduce, and extend.
 
-<div class="home-metrics" aria-label="学术成果概览">
+<div class="home-metrics" aria-label="Research output overview">
   <div><strong>3</strong><span>Journal Articles</span></div>
   <div><strong>3</strong><span>Open-source Projects</span></div>
   <div><strong>6</strong><span>Research Topics</span></div>
@@ -24,7 +24,7 @@ redirect_from:
 
 ## Research Interests
 
-<div class="research-tags" aria-label="研究方向">
+<div class="research-tags" aria-label="Research interests">
   <span>Multi-objective Optimization</span>
   <span>Evolutionary Computation</span>
   <span>Deep Reinforcement Learning</span>
@@ -67,4 +67,3 @@ redirect_from:
 </div>
 
 <p><a class="section-link" href="/portfolio/">Explore all projects →</a></p>
-
